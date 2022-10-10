@@ -1,8 +1,12 @@
+import Home from "./pages/Home/Home";
+import GlobalStyles from "./styles/GlobalStyles";
+
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <GlobalStyles />
+      <Home />
+    </>
   );
 }
 
