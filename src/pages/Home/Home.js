@@ -1,9 +1,8 @@
-import {Text} from "./styles";
-
+import Navbar from '../../layouts/Navbar/index'
 const Home = () => {
   return (
     <>
-      <Text> </Text>
+      <Navbar />
     </>
   );
 }
