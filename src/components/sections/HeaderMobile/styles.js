@@ -3,9 +3,7 @@ import variables from "../../../styles/variables";
 
 export const Container = styled.section`
   position: absolute;
-  backdrop-filter: blur(5px);
-  width: 100%;
-  height: 100%;
+  backdrop-filter: blur(40px);
   top: 0;
   left: 0;
   right: 0;
@@ -14,12 +12,13 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #020202;
+  background: black ${variables.neutral.neutral100};
   opacity: 0;
   pointer-events: none;
   transform: translateY(50px);
-  transition: .5s;
+  transition: .6s;
   display: flex;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
 
   > svg {
     position: absolute;
@@ -29,7 +28,7 @@ export const Container = styled.section`
     transition: .7s;
   }
 
-  ${({ isVisible }) => isVisible && css`
+  ${({isVisible}) => isVisible && css`
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0px);
@@ -40,25 +39,25 @@ export const Container = styled.section`
   `}
 `;
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav` `;
 
 export const Ul = styled.ul`
     text-align: center;
+    list-style: none;
     A:hover {  
       /* border-bottom: 2px solid #FFB800;   */
    }
 `;
 
 export const Li = styled.li`
-   A {
-    color: ${variables.text.dark.title};
-		font-size: clamp(0.1em, 0.5em + 2.9vw, 1.9em);
-		padding: 24px;
-		display: inline-block;
-		text-decoration: none;
-		transition: background .4s;
-    //font-size: 30px;
-   }
+  A {
+  color: ${variables.text.dark.title};
+  font-size: clamp(0.1em, 0.5em + 2.9vw, 1.9em);
+  padding: 24px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background .4s;
+  }
 `;
 
 export const A = styled.a` `;

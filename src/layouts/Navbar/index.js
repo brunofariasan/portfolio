@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Header } from "../../components/sections/Header/Header";
 import { NavbarMobile } from "../../components/sections/HeaderMobile";
-import { HomeContainer } from "../../styles/HomeStyles";
+
+import {
+  Container,
+  HomeContainer,
+} from '../Navbar/styles'
 
 export function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   return (
-    <>
+    <Container>
       <NavbarMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
@@ -15,7 +19,8 @@ export function Home() {
       <HomeContainer>
         <Header setMenuIsVisible={setMenuIsVisible}/>
       </HomeContainer>
-    </>
+    </Container>
   )
 }
+
 export default Home;

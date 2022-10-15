@@ -22,7 +22,7 @@ export function NavbarMobile({ menuIsVisible, setMenuIsVisible }) {
 						<A href="#"> HOME </A>
 					</Li>
 					<Li>
-						<A href="#"> ABOUT1 </A>
+						<A href="#"> ABOUT </A>
 					</Li>
 					<Li>
 						<A href="#"> WORK </A>

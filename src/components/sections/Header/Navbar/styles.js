@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import variables from "../../../../styles/variables";
 
-export const Navbar = styled.header`
+export const Container = styled.nav` `;
+
+export const Navbar = styled.div`
   @media(max-width: 900px) {
     Nav {
       display: none;
@@ -17,7 +19,7 @@ export const Nav = styled.nav`
 
 export const Ul = styled.ul`
   A:hover {  
-    border-bottom: 2px solid #FFB800;  
+    border-bottom: 2px solid  ${variables.brand.yellow};  
   }
 `;
 
