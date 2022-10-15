@@ -13,9 +13,10 @@ export function Header({ setMenuIsVisible }) {
 			<Logo />
       <Navbar />
 			<NavbarIcon>
-        <HiMenuAlt1 size={35} color="#FFB800" onClick={() => setMenuIsVisible(true)} className="mobile"  />
+        <HiMenuAlt1 size={35} color="#FFB800" onClick={() => setMenuIsVisible(true)} className="mobile" />
 			</NavbarIcon>
     </Container>
   )
 }
+
 export default Header;

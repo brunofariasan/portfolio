@@ -1,6 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const Body = styled.body`
-    min-height: 100vh;
-    width: 100%;
-`;
+export const HomeContainer = styled.main` `;
+
+export const Container = styled.main` `;

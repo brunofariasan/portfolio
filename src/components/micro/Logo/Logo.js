@@ -1,9 +1,9 @@
-import logo from '../../../image/000000.png'
+import logo from '../../../assets/000000.png';
 import { 
 	Container, 
 	LogoImg,
 	Img,  
-} from './styles'
+} from './styles';
 
 function Logo() {
 	return (
