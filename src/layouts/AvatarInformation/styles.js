@@ -18,6 +18,8 @@ export const ScrollSection = styled.div`
     order: 3;
     position: absolute;
     width: 40px;
+    height: 80vh;
+
 	}
   @media (max-width: 300px) {
     display: none;
