@@ -1,0 +1,25 @@
+.slick-dots li button:before{
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.slick-dots li.slick-active button:before{
+  color: #FFB800;
+}
+
+.card:hover #details{
+  transform: translateY(85%);
+}
+
+
+.slick-list {
+  width: 900px;
+}
+
+.slick-slide {
+  width: 315px;
+}
+
+.slick-active {
+  width: 315px;
+}
