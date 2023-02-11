@@ -12,6 +12,8 @@ export const Text = styled.h1`
 	color: ${variables.neutral.neutral100};
 	font-family: 'Poppins',sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 12px;
+	text-align: initial;
+	max-width: 170px;
 `;
