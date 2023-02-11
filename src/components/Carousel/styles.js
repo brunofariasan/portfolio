@@ -2,6 +2,8 @@ import styled from "styled-components";
 import imagem from '../../assets/page_error.PNG';
 
 export const Container = styled.div`
+    max-width: 520px;
+
   .slick-arrow {
    display: none!important;
   }
@@ -13,12 +15,7 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 744){
-    width: 100%;
-    .Slider {
-      padding: 0 10px;
-    }
-  }
+ 
 `;
 
 export const Content = styled.div`
@@ -43,6 +40,9 @@ export const Content = styled.div`
     @media screen and (max-width: 600px){
       max-width: 240px;
     }
+    @media screen and (max-width: 450px){
+      max-width: 140px;
+    }
   }
 `;
 
@@ -53,8 +53,8 @@ export const Anchor = styled.a`
 `;
 
 export const Card = styled.div`
-  background: #C4C4C4 center center/ cover;
-  background-image: url(${imagem});
+  //background: url(${imagem}) center center/ cover;
+  
   border-radius: 10px;
   height: 150px;
   width: 230px;
@@ -64,17 +64,32 @@ export const Card = styled.div`
   overflow: hidden;
   z-index: -1;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.98s;
   margin: 10px 0px; 
  
-  &:hover{
+  /* &:hover{
     transform: scale(1.1);
-  }
-`; 
+  } */
 
+  @media screen and (max-width: 500px){
+    /* &:hover{
+    transform: scale(1);
+  } */
+    }
+`; 
+export const H1 = styled.span`
+
+position: absolute;
+top: -20px;
+    right: -10px;
+    font-size: 8em;
+    color: rgba(255,255,255,0.2);
+    pointer-events: none;
+    font-size: 80px;
+`;
 export const Details = styled.div`
-  padding: 14.5px;
-  background: linear-gradient(0deg, #020202, transparent);
+  padding: 14.5px 35px 11px 35px;
+  //background: linear-gradient(0deg, #FFB800, transparent);
   transition: 0.3s ease;
   justify-content: center;
   align-items: center;
@@ -83,5 +98,13 @@ export const Details = styled.div`
   width: 280px;
   height: 89px;
   border-radius: 10px;
-  transform: translateY(107%);
+  /* transform: translateY(107%); */
+  display: flex;
+  //align-items: flex-start;
+  @media screen and (max-width: 500px){
+ 
+      /* transform: translateY(79%); */
+
+  
+    }
 `;

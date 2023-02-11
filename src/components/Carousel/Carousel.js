@@ -3,6 +3,12 @@ import { useQuery } from 'react-query';
 import Title from '../micro/ProjectTitle/ProjectTitle';
 import Description from '../micro/Description/Description';
 import Slider from "react-slick";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { EffectCards } from "swiper";
+
 import './styles.css';
 import { 
   Container,
@@ -11,6 +17,7 @@ import {
   Anchor,
   Card,
   Details,
+  H1,
 } from './styles';
 
 function Carousel() {
@@ -74,21 +81,30 @@ const { data, isFetching } = useQuery('repos', async () => {
 	return (
     <Container>
       <Content>
+
         { isFetching && <p>Carregando ...</p> }
-        <Slider {...settings} >
+        <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
             {data?.map((data) =>(( 
+              <SwiperSlide>
               <ContentCarrousel key={data.full_name} >
                 <Anchor href={data.homepage ? data.homepage : data.html_url }>
                   <Card className='card' >
+                    <H1>WORK</H1>
                     <Details id='details' >
-                      <Title project={data.id} />
+                      <Title project={data.topics} />
                       <Description text={data.description} />
                     </Details>
                   </Card>
                 </Anchor>
               </ContentCarrousel>
+              </SwiperSlide>
             )))}
-        </Slider>
+        </Swiper>
       </Content>
     </Container>
 	);
