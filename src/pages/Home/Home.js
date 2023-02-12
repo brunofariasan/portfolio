@@ -5,6 +5,7 @@ import Work from '../../layouts/Work/Work';
 import { 
   Container,
 } from './styles';
+import LetsTalk from '../../layouts/LetsTalk/LetsTalk';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Avatar />
       <About />
       <Work />
+      <LetsTalk />
     </Container>
   );
 }
