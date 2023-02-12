@@ -6,6 +6,10 @@ export const Container = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	padding-top: 36px;
+
+	@media(max-width: 550px) {
+		padding-top: 10px;
+  }
 `;
 
 export const StyleButton = styled.button`
