@@ -53,7 +53,7 @@ export const SectionFlex = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 122px;
-  height: 615px;
+  height: 530px;
 
   @media(max-width: 950px) {
     gap: 100px;
@@ -65,6 +65,6 @@ export const SectionFlex = styled.div`
     flex-direction: column;
     gap: 22px;
     width: 100%;
-    height: 590px;
+    height: 615px;
   }
 `;
