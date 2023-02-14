@@ -9,6 +9,7 @@ import {
 const Input = (props) => {
   const { width, height, type } = props;
   let style = { outline: 'none' };
+  let placeholder = { };
 
   if (height) {
     style.height = height;
@@ -24,7 +25,7 @@ const Input = (props) => {
         props.type === 'textarea' ? (
           <TextArea
             style={style} 
-            placeholder="Write your message here"
+            {...props}
           />
         ) : (
           <Inputs
