@@ -2,7 +2,6 @@ import LineTitle from '../LineTitle/LineTitle';
 import { 
   Container, 
   Title,
-	Color
 } from './styles';
 
 function SectionTitle(props) {

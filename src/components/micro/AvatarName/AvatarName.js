@@ -3,11 +3,12 @@ import {
   Name,
 } from './styles';
 
-function AvatarName() {
+function AvatarName(props) {
+	const { textColor, children } = props;
 	return (
-		<Container>
-			<Name>
-				Bruno Faria
+		<Container >
+			<Name style={{ color: textColor}}>
+				{children}
 			</Name>
 		</Container>
 	);

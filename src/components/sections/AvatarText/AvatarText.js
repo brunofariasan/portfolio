@@ -7,7 +7,9 @@ import {
 function AvatarText() {
 	return (
 		<Container>
-			<AvatarName />
+			<AvatarName textColor="#FFB800">
+        Bruno Faria
+      </AvatarName>
 			<WorkDescription />
 		</Container>
 	);

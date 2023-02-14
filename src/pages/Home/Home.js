@@ -6,6 +6,7 @@ import {
   Container,
 } from './styles';
 import LetsTalk from '../../layouts/LetsTalk/LetsTalk';
+import Footer from '../../layouts/Footer/Footer';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <About />
       <Work />
       <LetsTalk />
+      <Footer />
     </Container>
   );
 }
