@@ -43,6 +43,7 @@ export const ImgLeft = styled.div`
 export const Background = styled.img`
   filter: brightness(50%);
   height: 63%;
+  user-drag: none;
 
   @media (max-width: 500px) {
   width: 100%;

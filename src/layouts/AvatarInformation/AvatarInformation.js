@@ -1,3 +1,4 @@
+import React from 'react';
 import Icon from '../../components/sections/SocialIcon/SocialIcon';
 import LineScroll from '../../components/sections/Scroll/Scroll';
 import Avatar from '../../components/micro/Avatar/Avatar';

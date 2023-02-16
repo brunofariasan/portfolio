@@ -11,5 +11,6 @@ export const Name = styled.p`
 	color: ${variables.brand.yellow};
 	font-size: clamp(0.1em, 0.8em + 2.9vw, 2.25em);
 	text-align: center;
-  padding-top: 15px;
+	text-align: revert;
+	line-height: 30px;
 `;

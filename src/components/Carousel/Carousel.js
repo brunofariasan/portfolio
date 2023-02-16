@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import Title from '../micro/ProjectTitle/ProjectTitle';
 import Description from '../micro/Description/Description';
 import Slider from "react-slick";
+import React from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

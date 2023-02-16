@@ -52,4 +52,8 @@ export const AvatarSection = styled.div`
 	}
 `;
 
-export const Information = styled.div` `;
+export const Information = styled.div` 
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+`;
