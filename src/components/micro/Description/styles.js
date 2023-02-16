@@ -9,11 +9,12 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.h1`
-	color: ${variables.neutral.neutral100};
+	//color: ${variables.neutral.neutral100};
+	color: white;
 	font-family: 'Poppins',sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 300;
+  font-size: 16px;
 	text-align: initial;
-	max-width: 170px;
+	width: 100%;
 `;

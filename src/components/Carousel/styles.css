@@ -1,55 +1,14 @@
-.slick-dots li button:before{
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.slick-dots li.slick-active button:before{
-  color: #FFB800;
-}
-
-/* .card:hover #details{
-  transform: translateY(75%);
-} */
-@media screen and (max-width: 500px){
-  /* .card:hover #details{
-    transform: translateY(75%);
-  } */
-  }
-
-.slick-list {
-  width: 900px;
-}
-
-.slick-slide {
-  width: 315px;
-}
-
-.slick-active {
-  width: 315px;
-}
-
 .swiper {
   max-width: 240px;
   height: 320px;
-
 }
-@media screen and (max-width: 414px){
 
+@media screen and (max-width: 414px){
   .swiper {
     max-width: 190px;
     height: 320px;
-  
   }
 }
-
-/* @media screen and (max-width: 414px){
-
-  .swiper {
-    max-width: 150px;
-    height: 320px;
-  
-  }
-} */
 
 .swiper-slide {
   box-shadow: 10px 10px 30px rgb(0 0 0 / 50%);
@@ -65,5 +24,31 @@
 .swiper-slide:nth-child(1n) {
   background-color:   #FFB800;
   background-image: linear-gradient(to right, #fac94b, #FFB800);
-  ;
+}
+
+/* Estilo carrossel Blog */
+
+.slick-dots li button:before{
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.slick-dots li.slick-active button:before{
+  color: #FFB800;
+}
+
+.slick-dots {
+  bottom: -65px;
+}
+
+.slick-list {
+  width: 960px;
+}
+
+.slick-slide {
+  width: 315px;
+}
+
+.slick-active {
+  width: 315px;
 }
