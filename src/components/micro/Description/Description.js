@@ -4,10 +4,11 @@ import {
 } from './styles';
 
 function Description(props) {
+  const { textColor, fontWeight, children } = props;
 	return (
     <Container>
-      <Text>
-        {props.text}
+      <Text style={{ color: textColor, fontWeight: fontWeight}}>
+        {children}
       </Text>
     </Container>
 	);

@@ -8,7 +8,8 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-	color: ${variables.neutral.neutral100};
+	//color: ${variables.neutral.neutral100};
+	color: white;
 	font-family: 'Poppins',sans-serif;
   font-style: normal;
   font-weight: 600;

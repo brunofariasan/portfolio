@@ -4,10 +4,10 @@ import {
 } from './styles';
 
 function AvatarName(props) {
-	const { textColor, children } = props;
+	const { textColor, fontSize, children } = props;
 	return (
 		<Container >
-			<Name style={{ color: textColor}}>
+			<Name style={{ color: textColor, fontSize: fontSize}}>
 				{children}
 			</Name>
 		</Container>

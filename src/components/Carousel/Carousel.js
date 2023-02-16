@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useQuery } from 'react-query';
 import Title from '../micro/ProjectTitle/ProjectTitle';
 import Description from '../micro/Description/Description';
-import Slider from "react-slick";
 import React from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,73 +22,20 @@ import {
 
 function Carousel() {
 
-const { data, isFetching } = useQuery('repos', async () => {
+const { data } = useQuery('repos', async () => {
   const response = await axios.get('https://api.github.com/users/brunofariasan/repos')
   return response.data;
 })
-  const settings = {
-    lazyLoad: false,
-    dots: true,
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "30px",
-    slidesToShow: 3,
-    speed: 1000,
-    rows: 2,
-    slidesPerRow: 1,
-    swipeToSlide: true,
-    slidesToScroll: 4,
-    initialSlide: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          dots: true,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          centerPadding: "-70px",
-        }
-      },
-      {
-        breakpoint: 744,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-          centerPadding: "0px",
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerPadding: "-10px"
-        }
-      },
-      {
-        breakpoint: 414,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerPadding: "0px",
-        }
-      }
-    ]
-  };
 
 	return (
     <Container>
       <Content>
-
-        { isFetching && <p>Carregando ...</p> }
         <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper"
-      >
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwiper"
+        >
             {data?.map((data) =>(( 
               <SwiperSlide>
               <ContentCarrousel key={data.full_name} >
@@ -98,7 +44,12 @@ const { data, isFetching } = useQuery('repos', async () => {
                     <H1>WORK</H1>
                     <Details id='details' >
                       <Title project={data.topics} />
-                      <Description text={data.description} />
+                      <Description 
+                        textColor="black" 
+                        fontWeight='500'
+                      >
+                        {data.description}
+                      </Description>
                     </Details>
                   </Card>
                 </Anchor>
@@ -110,4 +61,5 @@ const { data, isFetching } = useQuery('repos', async () => {
     </Container>
 	);
 }
+
 export default Carousel;
