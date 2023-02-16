@@ -55,4 +55,6 @@ export const ImageAvatar = styled.div`
   }
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+  user-drag: none;
+`;

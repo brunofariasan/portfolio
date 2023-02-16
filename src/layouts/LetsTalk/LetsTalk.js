@@ -1,20 +1,21 @@
+import React from 'react';
 import { useState } from 'react';
 import Button from '../../components/micro/Button/Button';
 import Input from '../../components/micro/Input/Input';
 import SectionTitle from '../../components/micro/SectionTitle/SectionTitle';
 import TextArea from '../../components/micro/TextArea/TextArea';
 import TitleTalk from '../../components/micro/TitleTalk/TitleTalk';
-import {
-  Container,
-  Content,
-  SectionText,
-  SectionInput,
-  SectionFlex,
-  ErrorSection,
-  SpinnerSection,
-} from './styles';
 import emailjs from '@emailjs/browser'
 import Spinner from '../../components/micro/Spinner/Spinner';
+import {
+  Container,
+  SpinnerSection,
+  Content,
+  SectionFlex,
+  SectionText,
+  SectionInput,
+  ErrorSection,
+} from './styles';
 
 function LetsTalk() {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +31,6 @@ function LetsTalk() {
   const [nameFocus, setNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [messageFocus, setMessageFocus] = useState(false);
-
 
   function sendEmail(e) {
     e.preventDefault();
@@ -74,12 +74,6 @@ function LetsTalk() {
       console.log("ERRO: ", err)
     })
   }
-
-  const [inputsFilled, setInputsFilled] = useState({
-    input1: false,
-    input2: false,
-    input3: false,
-  });
 
   const handleNameBlur = (e) => {
     setNameFocus(false)
@@ -185,9 +179,7 @@ function LetsTalk() {
                 "* Fill in the message field"
               )}
             </ErrorSection>
-            <Button
-              type="submit"
-            />
+            <Button type="submit" />
           </SectionInput>
         </SectionFlex>
       </Content>

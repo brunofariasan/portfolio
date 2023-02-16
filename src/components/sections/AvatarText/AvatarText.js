@@ -1,3 +1,4 @@
+import React from 'react';
 import AvatarName from '../../micro/AvatarName/AvatarName';
 import WorkDescription from '../../micro/WorkDescription/WorkDescription';
 import { 
