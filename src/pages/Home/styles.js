@@ -10,3 +10,7 @@ export const Container = styled.div`
 export const Text = styled.h2`
   color: ${variables.brand.yellow};
 `;
+
+export const Div = styled.div`
+  background-color: black;
+`;

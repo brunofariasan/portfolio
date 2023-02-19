@@ -1,14 +1,17 @@
-import { 
-  Container, 
+import {
+  Container,
   StyleButton,
 } from './styles';
 
-function Button() {
-	return (
+function Button(props) {
+  const { color, background, width, children } = props;
+  return (
     <Container>
-      <StyleButton> Send Message </StyleButton>
+      <StyleButton style={{ color: color, background: background, width: width}}>
+        {children}
+      </StyleButton>
     </Container>
-	);
+  );
 }
 
 export default Button;

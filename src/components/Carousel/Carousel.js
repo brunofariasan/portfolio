@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useQuery } from 'react-query';
+import { useQuery, useQueryClient } from 'react-query';
 import Title from '../micro/ProjectTitle/ProjectTitle';
 import Description from '../micro/Description/Description';
 import React from 'react';
@@ -10,7 +10,7 @@ import "swiper/css/effect-cards";
 import { EffectCards } from "swiper";
 
 import './styles.css';
-import { 
+import {
   Container,
   Content,
   ContentCarrousel,
@@ -19,15 +19,18 @@ import {
   Details,
   H1,
 } from './styles';
+import Button from '../micro/Button/Button';
 
 function Carousel() {
 
-const { data } = useQuery('repos', async () => {
-  const response = await axios.get('https://api.github.com/users/brunofariasan/repos')
-  return response.data;
-})
+  const { data, isFetching } = useQuery('repos', async () => {
+    const response = await axios.get('https://api.github.com/users/brunofariasan/repos')
+    return response.data;
+  }, {
+    staleTime: 1000 * 600
+  })
 
-	return (
+  return (
     <Container>
       <Content>
         <Swiper
@@ -36,30 +39,43 @@ const { data } = useQuery('repos', async () => {
           modules={[EffectCards]}
           className="mySwiper"
         >
-            {data?.map((data) =>(( 
-              <SwiperSlide>
-              <ContentCarrousel key={data.full_name} >
-                <Anchor href={data.homepage ? data.homepage : data.html_url }>
-                  <Card className='card' >
-                    <H1>WORK</H1>
-                    <Details id='details' >
-                      <Title project={data.topics} />
-                      <Description 
-                        textColor="black" 
-                        fontWeight='500'
+          {data?.slice(0, 3).map((data) => ((
+            <SwiperSlide key={data.id}>
+              <ContentCarrousel>
+                <Card className='card' >
+                  <H1>WORK</H1>
+                  <Details id='details' >
+                    <Title
+                      color='black'
+                      letterSpacing='3px'
+                    >
+                      {data.topics}
+                    </Title>
+                    <Description
+                      textColor="black"
+                      fontWeight='500'
+                      textAlign='center'
+                    >
+                      {data.description}
+                    </Description>
+                    <Anchor href={data.html_url} target="_blank">
+                      <Button
+                        background='rgba(255,255,255,0.2)'
+                        color='black'
+                        width="80%"
                       >
-                        {data.description}
-                      </Description>
-                    </Details>
-                  </Card>
-                </Anchor>
+                        Read More
+                      </Button>
+                    </Anchor>
+                  </Details>
+                </Card>
               </ContentCarrousel>
-              </SwiperSlide>
-            )))}
+            </SwiperSlide>
+          )))}
         </Swiper>
       </Content>
     </Container>
-	);
+  );
 }
 
 export default Carousel;

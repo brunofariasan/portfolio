@@ -4,7 +4,6 @@ import variables from "../../.../../../styles/variables";
 export const Container = styled.div`
 	display: flex;
 	align-items: center;
-	//padding: 0% 0% 10px 0%;
 	justify-content: center;
 `;
 

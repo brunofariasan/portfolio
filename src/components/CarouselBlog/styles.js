@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import imagem from '../../assets/page_error.PNG';
 
 export const Container = styled.div`
   max-width: 920px;

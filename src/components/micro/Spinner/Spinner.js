@@ -1,6 +1,5 @@
 import {
   Container,
-  StyleButton,
 } from './styles';
 
 function Spinner() {

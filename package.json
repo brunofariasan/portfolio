@@ -1,5 +1,6 @@
 {
   "name": "web-portfolio",
+  "proxy": "https://api.medium.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

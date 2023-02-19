@@ -22,17 +22,17 @@ function Work() {
         <CarouselSection>
           <Carousel />
         </CarouselSection>
-        <ImgSection>
-          <ImgLeft>
-            <Background src={imge1} alt="avatar" />
-          </ImgLeft>
-          <ImgCenter>
-            <Background src={imge} alt="avatar" />
-          </ImgCenter>
-          <ImgRight>
-            <Background src={imge4} alt="avatar" />
-          </ImgRight>
-        </ImgSection>
+          <ImgSection>
+            <ImgLeft>
+              <Background src={imge1} alt="avatar" />
+            </ImgLeft>
+            <ImgCenter>
+              <Background src={imge} alt="avatar" />
+            </ImgCenter>
+            <ImgRight>
+              <Background src={imge4} alt="avatar" />
+            </ImgRight>
+          </ImgSection>
       </Content>
     </Container>
   );
