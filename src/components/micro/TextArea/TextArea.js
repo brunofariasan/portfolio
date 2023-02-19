@@ -2,15 +2,14 @@ import {
   Container, 
   Text,
 } from './styles';
+import { useTranslation } from "react-i18next";
 
 function TextArea() {
+  const { t, i18n: { language } } = useTranslation();
 	return (
     <Container>
       <Text>
-        If you want to get in touch with me, 
-        feel free to fill out the contact form on the side. 
-        I will be delighted to read your message and 
-        get back to you as soon as possible. Thanks!
+      {t("letsMessage")}
       </Text>
     </Container>
 	);

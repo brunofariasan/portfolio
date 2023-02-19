@@ -36,4 +36,5 @@ export const A = styled.a`
   display: inline-block;
   text-decoration: none;
   transition: background .4s;
+  text-transform: uppercase;
 `;
