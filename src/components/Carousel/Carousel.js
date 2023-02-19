@@ -2,7 +2,8 @@ import axios from 'axios';
 import { useQuery, useQueryClient } from 'react-query';
 import Title from '../micro/ProjectTitle/ProjectTitle';
 import Description from '../micro/Description/Description';
-import React from 'react';
+import { useTranslation } from "react-i18next";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -29,6 +30,10 @@ function Carousel() {
   }, {
     staleTime: 1000 * 600
   })
+  const { 
+    t, 
+    i18n: {changeLanguage, language},
+   } = useTranslation()
 
   return (
     <Container>
@@ -64,7 +69,9 @@ function Carousel() {
                         color='black'
                         width="80%"
                       >
-                        Read More
+                       
+                       {t("buttonMre")}
+
                       </Button>
                     </Anchor>
                   </Details>
@@ -72,6 +79,7 @@ function Carousel() {
               </ContentCarrousel>
             </SwiperSlide>
           )))}
+         
         </Swiper>
       </Content>
     </Container>

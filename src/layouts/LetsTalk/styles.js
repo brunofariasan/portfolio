@@ -7,6 +7,10 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 30px;
+
+  @media(max-width: 768px) {
+    min-height: 890px;}
+
 `;
 
 export const SpinnerSection = styled.div`
@@ -55,13 +59,14 @@ export const SectionFlex = styled.div`
     flex-direction: column;
     gap: 22px;
     width: 100%;
-    height: 615px;
+    min-height: 745px;
+
   }
 `;
 
 export const SectionText = styled.div`
   max-width: 297px;
-  max-height: 202px;
+  //max-height: 202px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -72,6 +77,10 @@ export const SectionText = styled.div`
     align-items: center;
     gap: 30px;
   }
+`;
+
+export const SectionIcons = styled.div`
+  
 `;
 
 export const SectionInput = styled.form`
@@ -92,4 +101,8 @@ export const ErrorSection = styled.div`
   color: red;
   height: 25px;
   padding-left: 5px;
+`;
+
+export const SectionButton = styled.div`
+  padding-top: 30px;
 `;

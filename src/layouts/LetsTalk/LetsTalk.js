@@ -7,15 +7,20 @@ import TextArea from '../../components/micro/TextArea/TextArea';
 import TitleTalk from '../../components/micro/TitleTalk/TitleTalk';
 import emailjs from '@emailjs/browser'
 import Spinner from '../../components/micro/Spinner/Spinner';
+import { useTranslation } from "react-i18next";
+
 import {
   Container,
   SpinnerSection,
   Content,
   SectionFlex,
   SectionText,
+  SectionIcons,
   SectionInput,
   ErrorSection,
+  SectionButton,
 } from './styles';
+import Icons from '../../components/micro/Icons/Icons';
 
 function LetsTalk() {
   const [isLoading, setIsLoading] = useState(false);
@@ -31,6 +36,7 @@ function LetsTalk() {
   const [nameFocus, setNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [messageFocus, setMessageFocus] = useState(false);
+  const { t, i18n: { language } } = useTranslation();
 
   function sendEmail(e) {
     e.preventDefault();
@@ -64,15 +70,15 @@ function LetsTalk() {
     }
 
     emailjs.send("service_nhcj94n", "template_7vpmc4c", templateParams, "52Oa3eNjO3KM21-M6")
-    .then((response) => {
-      console.log("Email Enviado com SUCESSO!!!", response.status, response.text)
-      setName('')
-      setEmail('')
-      setMessage('')
-      setIsLoading(false)
-    }, (err) => {
-      console.log("ERRO: ", err)
-    })
+      .then((response) => {
+        console.log("Email Enviado com SUCESSO!!!", response.status, response.text)
+        setName('')
+        setEmail('')
+        setMessage('')
+        setIsLoading(false)
+      }, (err) => {
+        console.log("ERRO: ", err)
+      })
   }
 
   const handleNameBlur = (e) => {
@@ -119,28 +125,35 @@ function LetsTalk() {
         </SpinnerSection>
       }
       <Content>
-        <SectionTitle titleWork='CONTACT' />
+        <SectionTitle titleWork={t("contact")} />
         <SectionFlex>
           <SectionText>
             <TitleTalk />
             <TextArea />
+            <SectionIcons>
+              <Icons
+                width="200px"
+                height="50px"
+                flexDirection="initial"
+              />
+            </SectionIcons>
           </SectionText>
           <SectionInput onSubmit={sendEmail}>
             <Input
               width="100%"
               height="50px"
               type="text"
-              title="Name"
-              placeholder="Write your name here"
+              title={t("titleInputName")}
+              placeholder={t("placeholderName")}
               onChange={(e) => setName(e.target.value)}
               value={name}
               onBlur={handleNameBlur}
             />
             <ErrorSection>
               {nameFocus ? (
-                "* Required field"
+                t("requiredField")
               ) : nameError && (
-                "* Fill in the name field"
+                t("fillFieldName")
               )}
             </ErrorSection>
             <Input
@@ -148,43 +161,45 @@ function LetsTalk() {
               height="50px"
               type="email"
               title="E-mail"
-              placeholder="Write your e-mail here"
+              placeholder={t("placeholderEmail")}
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               onBlur={handleEmailBlur}
             />
             <ErrorSection>
               {emailFocus ? (
-                "* Required field"
+                t("requiredField")
               ) : emailError ? (
-                "* Fill in the E-mail field"
+                t("fillFieldEmail")
               ) : !isValid && (
-                "* Enter a valid E-mail address"
+                t("fieldEmailInvalid")
               )}
             </ErrorSection>
             <Input
               width="100%"
               height="104px"
               type="textarea"
-              title="Message"
-              placeholder="Write your message here"
+              title={t("titleInputMessage")}
+              placeholder={t("placeholderMessage")}
               onChange={(e) => setMessage(e.target.value)}
               value={message}
               onBlur={handleMessageBlur}
             />
             <ErrorSection>
               {messageFocus ? (
-                "* Required field"
+                t("requiredField")
               ) : messageError && (
-                "* Fill in the message field"
+                t("fillFieldMessage")
               )}
             </ErrorSection>
-            <Button
-              type="submit"
-              color="black"
-            >
-              Send Message
-            </Button>
+            <SectionButton>
+              <Button
+                type="submit"
+                color="black"
+              >
+                {t("sendMessage")}
+              </Button>
+            </SectionButton>
           </SectionInput>
         </SectionFlex>
       </Content>

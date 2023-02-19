@@ -4,10 +4,10 @@ import {
 } from './styles';
 
 function Button(props) {
-  const { color, background, width, children } = props;
+  const { color, background, width, height, children } = props;
   return (
     <Container>
-      <StyleButton style={{ color: color, background: background, width: width}}>
+      <StyleButton style={{ color: color, background: background, width: width, height: height}}>
         {children}
       </StyleButton>
     </Container>

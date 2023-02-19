@@ -13,4 +13,9 @@ export const Text = styled.p`
 	font-size: 16px;
 	line-height: 24px;
 	color: ${variables.text.light.high};
+
+	  @media (max-width: 738px) {
+			text-align: center;
+    
+	}
 `;

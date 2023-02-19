@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import React from 'react';
 import AvatarName from '../micro/AvatarName/AvatarName';
 import { carouselSettings } from './Settings';
+import { useTranslation } from "react-i18next";
 
 import '../Carousel/styles.css';
 import {
@@ -19,6 +20,10 @@ import {
 } from './styles';
 
 function CarouselBlog() {
+  const { 
+    t, 
+    i18n: {changeLanguage, language},
+   } = useTranslation()
 
   const { data, isFetching } = useQuery('blog', async () => {
     const response = await axios.get('https://v1.nocodeapi.com/brunno97/medium/VhNmBdMPdLQjyBKR')
@@ -118,7 +123,7 @@ function CarouselBlog() {
                       >
                         {removePTag(data.content).slice(0, 150) + " ..."}
                       </Description>
-                      <TextLink>Read More</TextLink>
+                      <TextLink>{t("buttonMre")}</TextLink>
                     </Details>
                   </Card>
                 </Anchor>

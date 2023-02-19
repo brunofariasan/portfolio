@@ -60,7 +60,9 @@ export const Li = styled.li`
   }
 `;
 
-export const A = styled.a` `;
+export const A = styled.a` 
+  text-transform: uppercase;
+`;
 
 export const CloseNavbar = styled.div` 
   top: 0;

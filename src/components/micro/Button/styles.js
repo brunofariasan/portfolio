@@ -5,7 +5,6 @@ import variables from "../../../styles/variables";
 export const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	padding-top: 36px;
 	width: 100%;
 	
 	@media(max-width: 550px) {
