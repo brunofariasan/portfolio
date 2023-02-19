@@ -2,12 +2,14 @@ import Navbar from '../../layouts/Navbar/index';
 import Avatar from '../../layouts/AvatarInformation/AvatarInformation';
 import About from '../../layouts/About/About';
 import Work from '../../layouts/Work/Work';
-import { 
-  Container,
-} from './styles';
+import Blog from '../../layouts/Blog/Blog';
 import LetsTalk from '../../layouts/LetsTalk/LetsTalk';
 import Footer from '../../layouts/Footer/Footer';
-import Blog from '../../layouts/Blog/Blog';
+
+import {
+  Container,
+  Div,
+} from './styles';
 
 const Home = () => {
   return (

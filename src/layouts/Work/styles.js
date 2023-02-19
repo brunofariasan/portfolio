@@ -18,11 +18,9 @@ export const Content = styled.div`
 
 export const CarouselSection = styled.div`
   height: 65%;
-  display: flex;
-  align-items: flex-start;
 
   @media (max-width: 330px) {
-    width: 50%;
+    width: 80%;
 	}
 `;
 

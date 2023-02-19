@@ -26,6 +26,7 @@ export const ImageAvatar = styled.div`
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   overflow: hidden;
   animation: morph 3s linear infinite;
+  
   @keyframes morph {
     0%, 100%{
       border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;

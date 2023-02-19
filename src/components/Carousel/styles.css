@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 414px){
   .swiper {
-    max-width: 190px;
+   max-width: 200px;
     height: 320px;
   }
 }
@@ -21,6 +21,11 @@
   color: #fff;
 }
 
+@media screen and (max-width: 800px){ 
+.container__swiper {
+  height: 100%;
+}
+}
 .swiper-slide:nth-child(1n) {
   background-color:   #FFB800;
   background-image: linear-gradient(to right, #fac94b, #FFB800);

@@ -113,7 +113,7 @@ function LetsTalk() {
 
   return (
     <Container>
-      { isLoading &&
+      {isLoading &&
         <SpinnerSection>
           <Spinner />
         </SpinnerSection>
@@ -179,7 +179,12 @@ function LetsTalk() {
                 "* Fill in the message field"
               )}
             </ErrorSection>
-            <Button type="submit" />
+            <Button
+              type="submit"
+              color="black"
+            >
+              Send Message
+            </Button>
           </SectionInput>
         </SectionFlex>
       </Content>
