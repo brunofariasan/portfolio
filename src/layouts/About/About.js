@@ -10,9 +10,9 @@ import {
   SectionAbout,
 } from './styles';
 
-function About() {
+const About = React.forwardRef((props, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <DivFlex>
           <SectionImage>
@@ -26,6 +26,6 @@ function About() {
       </Content>
     </Container>
   );
-}
+});
 
 export default About;

@@ -7,7 +7,7 @@ import {
   HomeContainer,
 } from '../Navbar/styles'
 
-export function Home() {
+export function Home({ secHomeRef, secAboutRef, secWorkRef, secBlogRef, secLetsTalkRef }) {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   return (
@@ -17,7 +17,14 @@ export function Home() {
         setMenuIsVisible={setMenuIsVisible}
       />
       <HomeContainer>
-        <Header setMenuIsVisible={setMenuIsVisible}/>
+        <Header 
+          setMenuIsVisible={setMenuIsVisible} 
+          secHomeRef={secHomeRef}
+          secAboutRef={secAboutRef}
+          secWorkRef={secWorkRef}
+          secBlogRef={secBlogRef}
+          secLetsTalkRef={secLetsTalkRef}
+        />
       </HomeContainer>
     </Container>
   )

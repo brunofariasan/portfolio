@@ -12,10 +12,10 @@ import {
   Information,
 } from "./styles";
 
-export function AvatarInformation() {
+const AvatarInformation = React.forwardRef((props, ref) => {
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <ScrollSection>
           <Icon />
@@ -30,6 +30,6 @@ export function AvatarInformation() {
       </Content>
     </Container>
   )
-}
+});
 
 export default AvatarInformation;
