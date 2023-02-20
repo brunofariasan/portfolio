@@ -196,6 +196,7 @@ function LetsTalk() {
               <Button
                 type="submit"
                 color="black"
+                height="50px"
               >
                 {t("sendMessage")}
               </Button>

@@ -12,12 +12,13 @@ import {
 	CloseNavbar,
 } from './styles';
 import Button from '../../micro/Button/Button';
+import { Idioma, IdiomaName, LanguageSelectionSession, SectionButton } from '../Header/Navbar/styles';
 
 export function NavbarMobile({ menuIsVisible, setMenuIsVisible }) {
 	useEffect(() => {
 		document.body.style.overflowY = menuIsVisible ? 'hidden' : 'auto';
 	}, [menuIsVisible]);
-
+	const [showDiv, setShowDiv] = useState(false);
 	const {
 		t,
 		i18n: { changeLanguage, language },
@@ -27,12 +28,14 @@ export function NavbarMobile({ menuIsVisible, setMenuIsVisible }) {
 
 	const handleLanguage = () => {
 
-		const newLanguage = curentLanguage === 'en' ? 'br' : 'en'
+		const newLanguage = curentLanguage === 'en' ? 'pt' : 'en'
 		changeLanguage(newLanguage)
 		setCurentLanguage(newLanguage)
-		console.log('teste')
 	}
 
+	const handleButtonClick = () => {
+		setShowDiv(!showDiv);
+	};
 
 	return (
 		<Container isVisible={menuIsVisible}>
@@ -50,14 +53,26 @@ export function NavbarMobile({ menuIsVisible, setMenuIsVisible }) {
 					<Li>
 						<A href="#">{t("contact")}</A>
 					</Li>
-					<Button background="transparent" width="42px">
-						{curentLanguage === 'br' ? (
-							<img src={usa} onClick={handleLanguage} />
-						) : (
-							<img src={br} onClick={handleLanguage} />
-						)}
-					</Button>
 
+
+					
+					<LanguageSelectionSession onClick={handleButtonClick}>
+						<IdiomaName>
+							<Idioma>{curentLanguage}</Idioma>
+						</IdiomaName>
+						{showDiv &&
+							<SectionButton onClick={handleLanguage}>
+								<Idioma>{curentLanguage === 'pt' ? t("english") + " - ": t("portuguese")  + " - "}</Idioma>
+								<Button background="transparent">
+									{curentLanguage === 'en' ? (
+										<img src={br} />
+									) : (
+										<img src={usa} />
+									)}
+								</Button>
+							</SectionButton>
+						}
+					</LanguageSelectionSession>
 				</Ul>
 			</Nav>
 			<CloseNavbar>

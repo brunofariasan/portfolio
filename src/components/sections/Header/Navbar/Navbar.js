@@ -1,3 +1,9 @@
+import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
+import usa from '../../../../assets/eua.svg';
+import br from '../../../../assets/br.svg';
+import Button from "../../../micro/Button/Button";
+
 import {
 	Container,
 	Navbar,
@@ -5,29 +11,27 @@ import {
 	Ul,
 	Li,
 	A,
+	LanguageSelectionSession,
+	IdiomaName,
+	Idioma,
+	SectionButton,
 } from "./styles";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import usa from '../../../../assets/eua.svg';
-import br from '../../../../assets/br.svg';
-import Button from "../../../micro/Button/Button";
 
-export function Header() {
-	const {
-		t,
-		i18n: { changeLanguage, language },
-	} = useTranslation()
-
+export function Header({ sectionRef }) {
+	const {t, i18n: { changeLanguage, language } } = useTranslation()
 	const [curentLanguage, setCurentLanguage] = useState(language)
-
+	const [showDiv, setShowDiv] = useState(false);
+	
 	const handleLanguage = () => {
-
-		const newLanguage = curentLanguage === 'en' ? 'br' : 'en'
+		const newLanguage = curentLanguage === 'en' ? 'pt' : 'en'
 		changeLanguage(newLanguage)
 		setCurentLanguage(newLanguage)
-		console.log('teste')
+		setShowDiv(!showDiv);
 	}
 
+	const handleButtonClick = () => {
+		setShowDiv(!showDiv);
+	};
 
 	return (
 		<Container>
@@ -47,14 +51,24 @@ export function Header() {
 							<A href="#">{t("contact")}</A>
 						</Li>
 						<Li>
-						<Button background="transparent">
-							{curentLanguage === 'br' ? (
-								<img src={usa} onClick={handleLanguage} />
-							) : (
-								<img src={br} onClick={handleLanguage} />
-							)}
-						</Button>
-
+							<LanguageSelectionSession 
+								onClick={handleButtonClick}
+							>
+								<IdiomaName>
+									<Idioma>{curentLanguage}</Idioma>
+								</IdiomaName>
+								{showDiv &&
+									<SectionButton>
+											<Button background="transparent">
+												{curentLanguage === 'pt' ? (
+													<img src={usa} onClick={handleLanguage} />
+												) : (
+													<img src={br} onClick={handleLanguage} />
+												)}
+											</Button>
+									</SectionButton>
+								}
+							</LanguageSelectionSession>
 						</Li>
 					</Ul>
 				</Nav>
@@ -62,4 +76,5 @@ export function Header() {
 		</Container>
 	)
 }
+
 export default Header;

@@ -26,71 +26,11 @@ function CarouselBlog() {
    } = useTranslation()
 
   const { data, isFetching } = useQuery('blog', async () => {
-    const response = await axios.get('https://v1.nocodeapi.com/brunno97/medium/VhNmBdMPdLQjyBKR')
+    const response = await axios.get('https://v1.nocodeapi.com/brunno97/medium/VhNmBdMPdLQjyBKR0')
     return response.data;
   }, {
     staleTime:  1000 * 600
   })
-
-    // async function handleRepos () {
-    //     const prev = queryClient.getQueryData('blog')
-
-    //     const nextRepos = prev.map(repo => {
-    //         if(prev){
-    //           const nextReposs = prev.map(repo => {
-    //               if (blog.author ==)
-    //           })
-    //         }
-    //     })
-    // }
- 
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 5000,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 6,
-  //   initialSlide: 0,
-
-  //   lazyLoad: false,
-  //   dots: true,
-  //   className: "center",
-  //   centerMode: true,
-  //   infinite: true,
-  //   centerPadding: "3px",
-  //   slidesToShow: 3,
-  //   speed: 1000,
-  //   rows: 1,
-  //   slidesPerRow: 1,
-  //   swipeToSlide: true,
-  //   slidesToScroll: 3,
-  //   initialSlide: 3,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1000,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 3,
-  //         infinite: true,
-  //         dots: true
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 650,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         initialSlide: 1
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1
-  //       }
-  //     }
-  //   ]
-  // };
 
   function removePTag(text) {
     // Remove as tags <p> e <img>
