@@ -1,3 +1,4 @@
+import React from "react";
 import AvatarName from '../../components/micro/AvatarName/AvatarName';
 import WorkDescription from '../../components/micro/WorkDescription/WorkDescription';
 import TextCopyright from '../../components/micro/TextCopyright/TextCopyright';
@@ -5,7 +6,7 @@ import {
   Container, 
 } from './styles';
 
-function Footer() {
+const Footer = React.forwardRef((props, foot) => {
 	return (
 		<Container>
 			<AvatarName textColor="#020202">
@@ -14,6 +15,6 @@ function Footer() {
       <TextCopyright />
 		</Container>
 	);
-}
+});
 
 export default Footer;

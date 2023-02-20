@@ -1,12 +1,12 @@
 import React from 'react';
 import SectionTitle from '../../micro/SectionTitle/SectionTitle';
 import aem from '../../../assets/aem.png'
-import html from '../../../assets/html.png'
-import css from '../../../assets/css.png'
-import react from '../../../assets/react.png'
+import html from '../../../assets/html.svg'
+import css from '../../../assets/css3.svg'
+import react from '../../../assets/react.svg'
 import js from '../../../assets/js.png'
-import styleComp from '../../../assets/styledComp.png'
-import sass from '../../../assets/sass.png'
+import styleComp from '../../../assets/styled-components.svg'
+import sass from '../../../assets/sass.svg'
 import SkillLogo from '../../../components/micro/SkillLogo/SkillLogo';
 import {
 	Container,

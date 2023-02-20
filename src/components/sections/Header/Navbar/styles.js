@@ -30,6 +30,43 @@ export const Li = styled.li`
   align-items: center;
 `;
 
+export const LanguageSelectionSession = styled.div`
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;    
+`;
+
+export const IdiomaName = styled.div`
+  width: 80px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  gap: 8px;
+  cursor: pointer;
+  background-color: transparent;  
+`;
+
+export const Idioma = styled.h3`
+  color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+`;
+
+export const SectionButton = styled.div`
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 48px;
+  gap: 5px;
+`;
+
 export const A = styled.a`
   color: ${variables.text.dark.title};
   font-size: 16px;

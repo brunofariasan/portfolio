@@ -20,9 +20,11 @@ const resources = {
       placeholderName: "Write your name here",
       placeholderEmail: "Write your E-mail here",
       placeholderMessage: "Write your message here",
+      english: "English",
+      portuguese: "Portuguese"
     },
   },
-  br: {
+  pt: {
     translation: {
       about: "Sobre",
       work: "Projetos",
@@ -45,6 +47,9 @@ const resources = {
       placeholderName: "Digite seu nome aqui",
       placeholderEmail: "Digite seu E-mail aqui",
       placeholderMessage: "Digite sua mesagem aqui",
+      english: "Inglês",
+      portuguese: "Português"
+
     },
   },
 };

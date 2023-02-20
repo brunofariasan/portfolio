@@ -10,8 +10,6 @@ export const Container = styled.div`
 `; 
 
 export const Icon = styled.a`
-  /* padding: 26px 20px 0px 20px;
-  width: 75px; */
   width: 30px;
   height: 30px;
   display: flex;
@@ -20,6 +18,10 @@ export const Icon = styled.a`
   background: gray;
   border-radius: 100%;
   align-items: center;
+
+  &:hover {
+    background-color: black;
+	}
   
   @media (max-width: ${variables.breakpoints.sm}) {
     //width: 55px;
