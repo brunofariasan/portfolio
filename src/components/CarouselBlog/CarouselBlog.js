@@ -26,7 +26,7 @@ function CarouselBlog() {
    } = useTranslation()
 
   const { data, isFetching } = useQuery('blog', async () => {
-    const response = await axios.get('https://v1.nocodeapi.com/brunno97/medium/VhNmBdMPdLQjyBKRl')
+    const response = await axios.get('https://v1.nocodeapi.com/brunno97/medium/VhNmBdMPdLQjyBKR')
     return response.data;
   }, {
     staleTime:  1000 * 600
