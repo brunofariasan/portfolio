@@ -74,4 +74,5 @@ export const A = styled.a`
   text-decoration: none;
   transition: background .4s;
   text-transform: uppercase;
+  cursor: pointer;
 `;

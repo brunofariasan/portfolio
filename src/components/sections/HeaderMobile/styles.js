@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import variables from "../../../styles/variables";
 
 export const Container = styled.section`
-  position: absolute;
+  position: fixed;
   backdrop-filter: blur(40px);
   top: 0;
   left: 0;

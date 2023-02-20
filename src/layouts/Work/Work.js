@@ -1,3 +1,4 @@
+import React from "react";
 import SectionTitle from '../../components/micro/SectionTitle/SectionTitle';
 import Carousel from '../../components/Carousel/Carousel';
 import imge from '../../assets/62972731.png'
@@ -16,11 +17,11 @@ import {
   ImgRight,
 } from './styles';
 
-function Work() {
+const Work = React.forwardRef((props, ref) => {
   const { t, i18n: { language } } = useTranslation();
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <SectionTitle titleWork={t("work")} />
         <CarouselSection>
@@ -40,6 +41,6 @@ function Work() {
       </Content>
     </Container>
   );
-}
+});
 
 export default Work;

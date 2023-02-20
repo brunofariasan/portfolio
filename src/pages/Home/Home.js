@@ -14,15 +14,26 @@ import {
 } from './styles';
 
 const Home = () => {
-  const sectionRef = useRef(null);
+  const secHomeRef = useRef(null);
+  const secAboutRef = useRef(null);
+  const secWorkRef = useRef(null);
+  const secBlogRef = useRef(null);
+  const secLetsTalkRef = useRef(null);
+
   return (
     <Container>
-      <Navbar />
-      <Avatar />
-      <About />
-      <Work />
-      <Blog />
-      <LetsTalk />
+      <Navbar 
+        secHomeRef={secHomeRef}
+        secAboutRef={secAboutRef}
+        secWorkRef={secWorkRef}
+        secBlogRef={secBlogRef}
+        secLetsTalkRef={secLetsTalkRef}
+      />
+      <Avatar ref={secHomeRef}/>
+      <About ref={secAboutRef}/>
+      <Work ref={secWorkRef}/>
+      <Blog ref={secBlogRef}/>
+      <LetsTalk ref={secLetsTalkRef}/>
       <Footer />
     </Container>
   );

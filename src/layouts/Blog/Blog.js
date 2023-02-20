@@ -8,9 +8,9 @@ import {
   CarouselSection,
 } from './styles';
 
-function Blog() {
+const Blog = React.forwardRef((props, ref) => {
   return (
-    <Container>
+    <Container ref={ref}>
       <Content>
         <SectionTitle titleWork='BLOG' />
         <CarouselSection>
@@ -19,6 +19,6 @@ function Blog() {
       </Content>
     </Container>
   );
-}
+});
 
 export default Blog;

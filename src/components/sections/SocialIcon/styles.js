@@ -4,7 +4,7 @@ export const Container = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 52vh;
+  height: 56vh;
   align-items: flex-end;
 
   @media(max-width: 500px) and (max-height: 725px)  {

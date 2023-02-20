@@ -22,7 +22,7 @@ import {
 } from './styles';
 import Icons from '../../components/micro/Icons/Icons';
 
-function LetsTalk() {
+const LetsTalk = React.forwardRef((props, ref) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [name, setName] = useState('');
@@ -118,7 +118,7 @@ function LetsTalk() {
   console.log(isLoading)
 
   return (
-    <Container>
+    <Container ref={ref}>
       {isLoading &&
         <SpinnerSection>
           <Spinner />
@@ -206,6 +206,6 @@ function LetsTalk() {
       </Content>
     </Container>
   );
-}
+});
 
 export default LetsTalk;

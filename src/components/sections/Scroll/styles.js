@@ -2,7 +2,7 @@ import styled from "styled-components";
 import variables from "../../../styles/variables";
 
 export const Container = styled.div`
-  height: 33vh;
+  height: 34vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

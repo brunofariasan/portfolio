@@ -6,9 +6,10 @@ import {
   Container, 
 } from './styles';
 
-const Footer = React.forwardRef((props, foot) => {
+const Footer = React.forwardRef((props, ref) => {
+	
 	return (
-		<Container>
+		<Container ref={ref}>
 			<AvatarName textColor="#020202">
         Bruno Faria
       </AvatarName>

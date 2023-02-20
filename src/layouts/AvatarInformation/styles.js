@@ -18,8 +18,8 @@ export const ScrollSection = styled.div`
     order: 3;
     position: absolute;
     width: 40px;
-    height: 80vh;
-
+    height: 100vh;
+    padding: 0 0 0 15px;
 	}
   @media (max-width: 300px) {
     display: none;
@@ -28,7 +28,7 @@ export const ScrollSection = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  height: 86vh;
+  height: 100vh;
 
   @media (max-width: ${variables.breakpoints.sm}) {
     display: grid;
@@ -46,7 +46,7 @@ export const AvatarSection = styled.div`
   @media (max-width: 500px) {
     width: 100vw;
     height: 450px;
-    height: 77vh;
+    height: 100vh;
     display: flex;
     align-items: center;
 	}
