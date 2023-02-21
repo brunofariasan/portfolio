@@ -1,18 +1,17 @@
-import { 
-  Container, 
+import {
+  Container,
   Text,
 } from './styles';
-import { useTranslation } from "react-i18next";
 
-function TextArea() {
-  const { t, i18n: { language } } = useTranslation();
-	return (
+function TextArea(props) {
+  const { children } = props;
+  return (
     <Container>
       <Text>
-      {t("letsMessage")}
+        {children}
       </Text>
     </Container>
-	);
+  );
 }
 
 export default TextArea;

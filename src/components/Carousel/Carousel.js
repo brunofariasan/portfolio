@@ -65,9 +65,10 @@ function Carousel() {
                     </Description>
                     <Anchor href={data.html_url} target="_blank">
                       <Button
-                        background='rgba(255,255,255,0.2)'
+                        background='rgba(255,255,255,0.4)'
                         color='black'
                         width="80%"
+                        height="37px"
                       >
                        
                        {t("buttonMre")}

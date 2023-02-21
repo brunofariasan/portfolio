@@ -16,7 +16,6 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-
   .slick-list {
     max-width: 850px;
     height: 360px;
@@ -65,10 +64,14 @@ export const H1 = styled.span`
   position: absolute;
   top: -20px;
   right: -10px;
-  font-size: 8em;
   color: rgba(255,255,255,0.1);
   pointer-events: none;
   font-size: 80px;
+  
+  @media screen and (max-width: 414px){
+    font-size: 70px;
+    right: -13px;
+  }
 `;
 
 export const Details = styled.div`
@@ -83,4 +86,8 @@ export const Details = styled.div`
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 500px){
+    padding: 7.5px 56px 11px 56px;
+  }
 `;

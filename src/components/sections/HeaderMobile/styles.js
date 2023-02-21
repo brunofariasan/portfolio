@@ -15,9 +15,9 @@ export const Container = styled.section`
   display: flex;
 
   flex-direction: column;
-    position: fixed;
-    inset: 0px 0px 0px;
-    overflow-y: scroll;
+  position: fixed;
+  inset: 0px 0px 0px;
+  overflow-y: scroll;
 
   > svg {
     position: absolute;
@@ -52,19 +52,18 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   A {
-  color: ${variables.text.dark.title};
-  font-size: clamp(0.1em, 0.5em + 2.9vw, 1.9em);
-  padding: 24px;
-  display: inline-block;
-  text-decoration: none;
-  transition: background .4s;
+    color: ${variables.text.dark.title};
+    font-size: clamp(0.1em, 0.5em + 2.9vw, 1.9em);
+    padding: 24px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
   }
 `;
 
 export const A = styled.a` 
   text-transform: uppercase;
   cursor: pointer;
-
 `;
 
 export const CloseNavbar = styled.div` 
@@ -72,7 +71,7 @@ export const CloseNavbar = styled.div`
   right: 0;
   bottom: 0;
   position: absolute;
-  padding: 30px 45px 0 0;
+  padding: 30px 26px 0 0;
 `;
 
 

@@ -69,6 +69,9 @@ export const SectionButton = styled.div`
   position: absolute;
   top: 48px;
   gap: 5px;
+  img{
+    border-radius: 20%;
+  }
 `;
 
 export const A = styled.a`

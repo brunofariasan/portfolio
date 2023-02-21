@@ -11,7 +11,7 @@ export const Text = styled.p`
 	font-style: normal;
 	font-weight: 300;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 26px;
 	color: ${variables.text.light.high};
 
 	  @media (max-width: 738px) {

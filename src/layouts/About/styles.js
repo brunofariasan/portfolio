@@ -11,9 +11,12 @@ export const Container = styled.div`
 export const Content = styled.div`
 	height: 100%;
 	display: flex;
-	padding: 40px;
+	padding: 50px;
 	align-items: center;
 	justify-content: center;
+	@media (max-width: 768px) {
+		padding: 50px 20px;
+	}
 `;
 
 export const DivFlex = styled.div`

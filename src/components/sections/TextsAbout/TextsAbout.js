@@ -11,17 +11,17 @@ import {
 } from './styles';
 
 function TextsAbout() {
-  const { t, i18n: { language } } = useTranslation();
+	const { t, i18n: { language } } = useTranslation();
 
 	return (
 		<Container>
 			<Content>
-				<SectionTitle titleAbout=	{t("about")} />
+				<SectionTitle titleAbout={t("about")} />
 				<AvatarName textColor="#FFB800">
 					Bruno Faria
 				</AvatarName>
 				<SectionText>
-					<TextArea />
+					<TextArea>{t("aboutMessage")} &#128578;</TextArea>
 				</SectionText>
 			</Content>
 		</Container>
