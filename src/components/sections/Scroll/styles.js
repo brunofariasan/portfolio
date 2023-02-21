@@ -2,10 +2,18 @@ import styled from "styled-components";
 import variables from "../../../styles/variables";
 
 export const Container = styled.div`
-  height: 34vh;
+  height: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: space-between;
+  padding: 0 0 20px 0px;
+
+  @media (max-width: 768px) {
+    height: 240px;
+    align-content: flex-end;
+    padding: 0 0 0px 0px;
+  }
 `;
 
 export const ScrollText = styled.div`
@@ -13,9 +21,13 @@ export const ScrollText = styled.div`
   display: flex;
   align-items: center;
   height: 30vh; 
-  height: 13vh;
-  width: 150px;
+  height: 120px;
+  min-width: 120px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    min-width: 100px;
+  }
 `;
 
 export const Text = styled.p`
@@ -34,4 +46,3 @@ export const Text = styled.p`
     line-height: 15px;
   }
 `; 
-

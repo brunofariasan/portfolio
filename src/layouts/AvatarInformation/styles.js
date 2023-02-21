@@ -6,13 +6,17 @@ export const Container = styled.div` `;
 export const ScrollSection = styled.div`
   position: absolute;
   width: 100px;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-end;
+  padding: 0px 0 70px 50px;
 
   @media (max-width: ${variables.breakpoints.lg}  ) {
     width: 80px;
+    padding: 0 0 0 15px;
+
 	}
   @media (max-width: ${variables.breakpoints.sm} ) {
     order: 3;
@@ -32,6 +36,7 @@ export const Content = styled.div`
 
   @media (max-width: ${variables.breakpoints.sm}) {
     display: grid;
+    align-items: end;
 	}
 `;
 

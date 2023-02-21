@@ -3,15 +3,21 @@ import React, { useState, useEffect } from 'react';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import Logo from '../../micro/Logo/Logo';
 import Navbar from './Navbar/Navbar';
-import { 
-	Container,
-	NavbarIcon,
+import {
+  Container,
+  NavbarIcon,
 } from "./styles";
 
-export function Header({ setMenuIsVisible, secHomeRef, secAboutRef, secWorkRef, secBlogRef, secLetsTalkRef }) {
+export function Header({
+  setMenuIsVisible,
+  secHomeRef,
+  secAboutRef,
+  secWorkRef,
+  secBlogRef,
+  secLetsTalkRef
+}) {
 
   const [headerColor, setHeaderColor] = useState('transparent');
-
   useEffect(() => {
     const handleScroll = () => {
       const position = window.pageYOffset;
@@ -21,10 +27,6 @@ export function Header({ setMenuIsVisible, secHomeRef, secAboutRef, secWorkRef, 
         setHeaderColor('transparent');
       }
     };
-
-    // background-color: #ffffff;
-    // backdrop-filter: blur(5px);
-
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -34,22 +36,22 @@ export function Header({ setMenuIsVisible, secHomeRef, secAboutRef, secWorkRef, 
 
   return (
     <Container style={{ backgroundColor: headerColor }}>
-			<Logo />
-      <Navbar 
+      <Logo />
+      <Navbar
         secHomeRef={secHomeRef}
         secAboutRef={secAboutRef}
         secWorkRef={secWorkRef}
         secBlogRef={secBlogRef}
         secLetsTalkRef={secLetsTalkRef}
       />
-			<NavbarIcon>
-        <HiMenuAlt1 
-          size={35} 
-          color="#FFB800" 
-          onClick={() => setMenuIsVisible(true)} 
-          className="mobile" 
+      <NavbarIcon>
+        <HiMenuAlt1
+          size={35}
+          color="#FFB800"
+          onClick={() => setMenuIsVisible(true)}
+          className="mobile"
         />
-			</NavbarIcon>
+      </NavbarIcon>
     </Container>
   )
 }

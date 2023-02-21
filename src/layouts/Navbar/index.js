@@ -15,6 +15,11 @@ export function Home({ secHomeRef, secAboutRef, secWorkRef, secBlogRef, secLetsT
       <NavbarMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
+        secHomeRef={secHomeRef}
+        secAboutRef={secAboutRef}
+        secWorkRef={secWorkRef}
+        secBlogRef={secBlogRef}
+        secLetsTalkRef={secLetsTalkRef}
       />
       <HomeContainer>
         <Header 

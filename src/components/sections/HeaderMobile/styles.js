@@ -2,12 +2,7 @@ import styled, { css } from "styled-components";
 import variables from "../../../styles/variables";
 
 export const Container = styled.section`
-  position: fixed;
-  backdrop-filter: blur(40px);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  backdrop-filter: blur(90px);
   z-index: 5;
   display: flex;
   align-items: center;
@@ -18,7 +13,11 @@ export const Container = styled.section`
   transform: translateY(50px);
   transition: .6s;
   display: flex;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
+
+  flex-direction: column;
+    position: fixed;
+    inset: 0px 0px 0px;
+    overflow-y: scroll;
 
   > svg {
     position: absolute;
@@ -39,7 +38,9 @@ export const Container = styled.section`
   `}
 `;
 
-export const Nav = styled.nav` `;
+export const Nav = styled.nav` 
+  height: 500px;
+`;
 
 export const Ul = styled.ul`
     text-align: center;
@@ -62,6 +63,8 @@ export const Li = styled.li`
 
 export const A = styled.a` 
   text-transform: uppercase;
+  cursor: pointer;
+
 `;
 
 export const CloseNavbar = styled.div` 

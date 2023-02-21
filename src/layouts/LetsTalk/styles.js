@@ -9,8 +9,8 @@ export const Container = styled.div`
   padding: 30px;
 
   @media(max-width: 768px) {
-    min-height: 890px;}
-
+    min-height: 890px;
+  }
 `;
 
 export const SpinnerSection = styled.div`
@@ -60,13 +60,11 @@ export const SectionFlex = styled.div`
     gap: 22px;
     width: 100%;
     min-height: 745px;
-
   }
 `;
 
 export const SectionText = styled.div`
   max-width: 297px;
-  //max-height: 202px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

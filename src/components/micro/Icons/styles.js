@@ -6,11 +6,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;    
-  height: 200px;
+  height: 335px;
   justify-content: space-around;
 
   @media (max-width: ${variables.breakpoints.sm}) {
-  height: 180px;
+  height: 200px;
 	}
 `; 
 

@@ -16,4 +16,6 @@ export const Background = styled.img`
 	height: 100%;
 	width: 100%;
 	min-width: 230px;
+  user-drag: none;
+
 `;
