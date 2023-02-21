@@ -43,7 +43,6 @@ export const Content = styled.div`
 export const AvatarSection = styled.div`
   width: 100vw;
   height: 100%;
-  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
