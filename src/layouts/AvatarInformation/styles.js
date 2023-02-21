@@ -25,6 +25,9 @@ export const ScrollSection = styled.div`
     height: 100vh;
     padding: 0 0 0 15px;
 	}
+  @media (max-width: 768px) {
+    height: calc(100vh - 50px);
+	}
   @media (max-width: 300px) {
     display: none;
 	}

@@ -71,7 +71,7 @@ export const CloseNavbar = styled.div`
   right: 0;
   bottom: 0;
   position: absolute;
-  padding: 30px 26px 0 0;
+  padding: 10px 26px 0 0;
 `;
 
 
