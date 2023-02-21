@@ -37,6 +37,8 @@ export const Content = styled.div`
   @media (max-width: ${variables.breakpoints.sm}) {
     display: grid;
     align-items: end;
+     height: calc(100vh - 50px);
+
 	}
 `;
 
@@ -46,6 +48,9 @@ export const AvatarSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: calc(100vw - 50px);
+	}
   @media (max-width: 500px) {
     display: flex;
     align-items: center;
