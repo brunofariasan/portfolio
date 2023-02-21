@@ -22,18 +22,18 @@ const Home = () => {
 
   return (
     <Container>
-      <Navbar 
+      <Navbar
         secHomeRef={secHomeRef}
         secAboutRef={secAboutRef}
         secWorkRef={secWorkRef}
         secBlogRef={secBlogRef}
         secLetsTalkRef={secLetsTalkRef}
       />
-      <Avatar ref={secHomeRef}/>
-      <About ref={secAboutRef}/>
-      <Work ref={secWorkRef}/>
-      <Blog ref={secBlogRef}/>
-      <LetsTalk ref={secLetsTalkRef}/>
+      <Avatar ref={secHomeRef} />
+      <About ref={secAboutRef} />
+      <Work ref={secWorkRef} />
+      <Blog ref={secBlogRef} />
+      <LetsTalk ref={secLetsTalkRef} />
       <Footer />
     </Container>
   );

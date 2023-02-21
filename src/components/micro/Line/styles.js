@@ -5,8 +5,9 @@ export const Container = styled.div`
 	display: flex;
 	align-items: center;
   transform: rotate(-90deg);
-  height: 180px;
-  width: 70px;
+  height: 120px;
+  min-width: 100px;
+  justify-content: center;
 `;
 
 export const Lines = styled.div`

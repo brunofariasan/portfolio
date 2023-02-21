@@ -56,6 +56,10 @@ export const Idioma = styled.h3`
   color: white;
   text-transform: uppercase;
   white-space: nowrap;
+
+  &:hover{
+    color: #FFB800;
+  }
 `;
 
 export const SectionButton = styled.div`
