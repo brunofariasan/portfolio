@@ -24,9 +24,9 @@ export function Header({
     const handleScroll = () => {
       const position = window.pageYOffset;
 
-      if (position > 20) {
+      if (position > 0) {
         setHeaderColor('rgba(255, 255, 255, 0.2)')
-        setBackdropFilter('blur(50px)');
+        setBackdropFilter('blur(10px)');
       } else {
         setHeaderColor('transparent');
         setBackdropFilter('blur(0px)');

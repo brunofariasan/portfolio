@@ -16,11 +16,10 @@ export const Container = styled.header`
   transition: .6s;
   opacity: 10;
   pointer-events: auto;
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transform: translateY(0px);
   justify-content: flex-end;
   
-
   @media(max-width: 900px) {
     padding: 0px 28px 0px 35px;
     z-index: 3;
