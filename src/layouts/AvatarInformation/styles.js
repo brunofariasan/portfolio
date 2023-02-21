@@ -42,15 +42,11 @@ export const Content = styled.div`
 
 export const AvatarSection = styled.div`
   width: 100vw;
-  height: 100%;
-  min-height: 500px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px white dashed;
   @media (max-width: 500px) {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
 	}

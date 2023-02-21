@@ -10,7 +10,7 @@ export const Container = styled.div`
   padding: 0 0 20px 0px;
 
   @media (max-width: 768px) {
-    height: 240px;
+    max-height: 240px;
     align-content: flex-end;
     padding: 0 0 0px 0px;
   }
