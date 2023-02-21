@@ -38,7 +38,7 @@ export const Content = styled.div`
     display: grid;
     align-items: end;
      height: calc(100vh - 50px);
-
+     align-content: center;
 	}
 `;
 
