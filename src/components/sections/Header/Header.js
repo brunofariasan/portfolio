@@ -18,18 +18,15 @@ export function Header({
 }) {
 
   const [headerColor, setHeaderColor] = useState('transparent');
-  const [backdropFilter, setBackdropFilter] = useState('blur(0px)');
 
   useEffect(() => {
     const handleScroll = () => {
       const position = window.pageYOffset;
 
       if (position > 0) {
-        setHeaderColor('rgba(255, 255, 255, 0.2)')
-        setBackdropFilter('blur(10px)');
+        setHeaderColor('#1c1919')
       } else {
         setHeaderColor('transparent');
-        setBackdropFilter('blur(0px)');
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -40,7 +37,7 @@ export function Header({
   }, []);
 
   return (
-    <Container style={{ backgroundColor: headerColor, backdropFilter: backdropFilter }}>
+    <Container style={{ backgroundColor: headerColor }}>
       <Navbar
         secHomeRef={secHomeRef}
         secAboutRef={secAboutRef}
