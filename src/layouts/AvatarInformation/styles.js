@@ -47,10 +47,9 @@ export const AvatarSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border: 1px white dashed;
   @media (max-width: 500px) {
     width: 100vw;
-    height: 450px;
     height: 100vh;
     display: flex;
     align-items: center;

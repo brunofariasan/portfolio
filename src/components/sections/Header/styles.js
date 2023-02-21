@@ -5,9 +5,8 @@ export const Container = styled.header`
   background-color: ${variables.neutral.neutral100};
   align-items: center;
   display: flex;
-  min-height: 10vh;
+  min-height: 80px;
   justify-content: space-between;
-  padding: 0 50px;
 
   position: fixed;
   top: 0;
@@ -17,11 +16,15 @@ export const Container = styled.header`
   transition: .6s;
   opacity: 10;
   pointer-events: auto;
+
   transform: translateY(0px);
+  justify-content: flex-end;
   
+
   @media(max-width: 900px) {
-    padding: 20px 28px 20px 35px;
+    padding: 0px 28px 0px 35px;
     z-index: 3;
+    min-height: 50px;
   }
 `;
 
@@ -29,6 +32,7 @@ export const NavbarIcon = styled.div`
   display: none;
   @media(max-width: 900px) {
     display: initial;
+    display: flex;
     Nav {
       display: none;
     }

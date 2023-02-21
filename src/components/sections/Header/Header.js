@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { HiMenuAlt1 } from 'react-icons/hi';
-import Logo from '../../micro/Logo/Logo';
+
 import Navbar from './Navbar/Navbar';
 import {
   Container,
@@ -18,13 +18,18 @@ export function Header({
 }) {
 
   const [headerColor, setHeaderColor] = useState('transparent');
+  const [backdropFilter, setBackdropFilter] = useState('blur(0px)');
+
   useEffect(() => {
     const handleScroll = () => {
       const position = window.pageYOffset;
-      if (position > 0) {
-        setHeaderColor('#222');
+
+      if (position > 20) {
+        setHeaderColor('rgba(255, 255, 255, 0.2)')
+        setBackdropFilter('blur(50px)');
       } else {
         setHeaderColor('transparent');
+        setBackdropFilter('blur(0px)');
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -35,8 +40,7 @@ export function Header({
   }, []);
 
   return (
-    <Container style={{ backgroundColor: headerColor }}>
-      <Logo />
+    <Container style={{ backgroundColor: headerColor, backdropFilter: backdropFilter }}>
       <Navbar
         secHomeRef={secHomeRef}
         secAboutRef={secAboutRef}

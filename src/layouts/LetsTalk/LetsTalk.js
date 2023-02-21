@@ -129,7 +129,7 @@ const LetsTalk = React.forwardRef((props, ref) => {
         <SectionFlex>
           <SectionText>
             <TitleTalk />
-            <TextArea />
+            <TextArea >{t("letsMessage")} &#128578;</TextArea>
             <SectionIcons>
               <Icons
                 width="200px"

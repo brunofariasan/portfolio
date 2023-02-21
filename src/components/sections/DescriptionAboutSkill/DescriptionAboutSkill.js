@@ -5,7 +5,9 @@ import html from '../../../assets/html.svg'
 import css from '../../../assets/css3.svg'
 import react from '../../../assets/react.svg'
 import js from '../../../assets/js.png'
+import node from '../../../assets/node-js.svg'
 import styleComp from '../../../assets/styled-components.svg'
+
 import sass from '../../../assets/sass.svg'
 import SkillLogo from '../../../components/micro/SkillLogo/SkillLogo';
 import {
@@ -22,6 +24,7 @@ function DescriptionAboutSkill() {
 				<SectionLogo>
 					<SkillLogo src={aem} />
 					<SkillLogo src={js} />
+					<SkillLogo src={node} />
 					<SkillLogo src={react} />
 					<SkillLogo src={css} />
 					<SkillLogo src={html} />
