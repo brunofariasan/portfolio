@@ -25,7 +25,7 @@ import Button from '../micro/Button/Button';
 function Carousel() {
 
   const { data, isFetching } = useQuery('repos', async () => {
-    const response = await axios.get('https://api.github.com/users/brunofariasan/repos')
+    const response = await axios.get(process.env.REACT_APP_REPOS_URL)
     return response.data;
   }, {
     staleTime: 1000 * 600

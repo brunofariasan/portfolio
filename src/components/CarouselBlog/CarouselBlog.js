@@ -18,15 +18,16 @@ import {
   Section,
   TextLink,
 } from './styles';
+const apiKey = process.env.REACT_APP_API_KEY;
 
 function CarouselBlog() {
-  const { 
+  const {
     t, 
     i18n: {changeLanguage, language},
    } = useTranslation()
 
   const { data, isFetching } = useQuery('blog', async () => {
-    const response = await axios.get('https://v1.nocodeapi.com/brunno97/medium/VhNmBdMPdLQjyBKR')
+    const response = await axios.get(process.env.REACT_APP_BLOG_URL)
     return response.data;
   }, {
     staleTime:  1000 * 600
