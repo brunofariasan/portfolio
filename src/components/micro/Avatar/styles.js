@@ -4,7 +4,6 @@ import variables from "../../.../../../styles/variables";
 export const Container = styled.div`
 	display: flex;
 	justify-content: center;
-
 	img {
     border-radius: 50%;
     height: 250px;
