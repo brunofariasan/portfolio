@@ -4,7 +4,6 @@ import variables from "../../.../../../styles/variables";
 export const Container = styled.div`
 	display: flex;
 	justify-content: center;
-
 	img {
     border-radius: 50%;
     height: 250px;
@@ -20,7 +19,6 @@ export const ImageAvatar = styled.div`
   align-items: center;
   
   //Animação
-  background: ${variables.brand.yellow};
   width: 220px;
   height: 220px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;

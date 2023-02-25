@@ -31,6 +31,10 @@ export const ScrollSection = styled.div`
   @media (max-width: 300px) {
     display: none;
 	}
+  @media (max-height: 770px) {
+  padding: 0px 0 10px 20px;
+    
+	}
 `;
 
 export const Content = styled.div`
