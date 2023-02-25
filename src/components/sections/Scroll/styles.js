@@ -14,6 +14,9 @@ export const Container = styled.div`
     align-content: flex-end;
     padding: 0 0 0px 0px;
   }
+  @media (max-height: 770px) {
+    height: 260px;
+  }
 `;
 
 export const ScrollText = styled.div`

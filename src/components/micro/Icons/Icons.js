@@ -16,12 +16,12 @@ function Icons(props) {
         <img src={github} alt="avatar" />
       </Icon>
       <Icon href="https://www.linkedin.com/in/bruno-santos-faria-66673411a/">
-        <img src={linkedin} alt="likendin" />
+        <img src={linkedin} alt="linkedin" />
       </Icon>
       <Icon href="https://www.instagram.com/bruno.san.faria/">
         <img src={instagram} alt="instagram" />
       </Icon>
-      <Icon href="https://https://github.com/brunofariasan">
+      <Icon href="https://wa.me/55037998375432">
         <img src={whatsapp} alt="whatsapp" />
       </Icon>
     </Container>

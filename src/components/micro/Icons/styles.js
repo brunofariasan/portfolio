@@ -9,8 +9,8 @@ export const Container = styled.div`
   height: 335px;
   justify-content: space-around;
 
-  @media (max-width: ${variables.breakpoints.sm}) {
-  height: 200px;
+  @media (max-height: 770px) {
+    height: 200px;
 	}
 `; 
 
