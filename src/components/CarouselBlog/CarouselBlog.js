@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { useQuery } from 'react-query';
 import Description from '../micro/Description/Description';
 import Slider from "react-slick";
@@ -25,7 +25,6 @@ function CarouselBlog() {
     t, 
     i18n: {changeLanguage, language},
    } = useTranslation()
-
   const { data, isFetching } = useQuery('blog', async () => {
     const response = await axios.get(process.env.REACT_APP_BLOG_URL)
     return response.data;
@@ -47,8 +46,8 @@ function CarouselBlog() {
       <Content>
         <Slider {...carouselSettings}>
           {data?.map((data) => ((
-            <Section>
-              <ContentCarrousel key={data.published} >
+            <Section key={data.published}>
+              <ContentCarrousel>
                 <Anchor href={data.link} target="_blank">
                   <Card className='card' >
                     <Details id='details'>
