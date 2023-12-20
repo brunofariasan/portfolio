@@ -57,7 +57,7 @@ const LetsTalk = React.forwardRef((props, ref) => {
     }
 
     const templateParams = {
-      from_name: name,
+      name: name,
       email: email,
       message: message,
     }
@@ -69,15 +69,13 @@ const LetsTalk = React.forwardRef((props, ref) => {
       setIsLoading(true)
     }
 
-    emailjs.send("service_nhcj94n", "template_7vpmc4c", templateParams, "52Oa3eNjO3KM21-M6")
+    emailjs.send("serviceGmail", "template_3h3cuma", templateParams, "X2vukpea5orjw7kwk")
       .then((response) => {
-        console.log("Email Enviado com SUCESSO!!!", response.status, response.text)
         setName('')
         setEmail('')
         setMessage('')
         setIsLoading(false)
       }, (err) => {
-        console.log("ERRO: ", err)
       })
   }
 
@@ -114,8 +112,6 @@ const LetsTalk = React.forwardRef((props, ref) => {
       setMessageError(false)
     }
   }
-
-  console.log(isLoading)
 
   return (
     <Container ref={ref}>
