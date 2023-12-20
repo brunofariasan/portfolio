@@ -39,10 +39,16 @@ export const ContentCarrousel = styled.div`
   width: 274px;
   background: #020202;
   border-radius: 20px;
+  -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none; 
 `;
 
 export const Anchor = styled.a`
   text-decoration: none;
+  -webkit-user-drag: none; 
+    user-drag: none;
+    -webkit-touch-callout: none;
 `;
 
 export const Card = styled.div`

@@ -88,6 +88,6 @@ export const Details = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 500px){
-    padding: 7.5px 56px 11px 56px;
+    padding: 16px 56px 11px 56px;
   }
 `;

@@ -9,8 +9,11 @@ export const Container = styled.div`
   height: 335px;
   justify-content: space-around;
 
-  @media (max-height: 770px) {
-    height: 200px;
+  @media (max-height: 1000px) and (max-width: 1200px) {
+    height: 250px;
+	}
+  @media (max-height: 1200px) and (max-width: 1400px) {
+    height: 250px;
 	}
 `; 
 

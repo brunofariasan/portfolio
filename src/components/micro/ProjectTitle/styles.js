@@ -12,7 +12,7 @@ export const Title = styled.h1`
 	color: white;
 	font-family: 'Poppins',sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 26px;
 `;
